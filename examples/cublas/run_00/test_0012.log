@@ -1,0 +1,13 @@
+./cublasTest -Rasum  -Ps -n10000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0012.log 2>&1
+---------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing sasum
+#### args: n=10000000 incx=1 loop=10
+^^^^CSV   0.00122213,  , 327.296,  , , , ,
+&&&& PERF Bandwidth 327.296 GB/s
+^^^^ CUDA : elapsed = 0.00122213 sec,  Bandwidth = 327.296 
+@@@@ sasum test PASSED
+---------------------------------------------------------------------------------------------------------
+ccvResult=0

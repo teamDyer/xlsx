@@ -1,0 +1,16 @@
+./cublasTest -Rrot   -Pz -n10000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0047.log 2>&1
+---------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing zrot 
+#### args: n=10000000 incx=1 incy=1  cs =  (0x3fecbd9d2e73ca44 0.898146), (0x3fc4e6fdf33cf032 0.163299) sc =  (0x3fda20bd700c2c3e, 0.408248)
+^^^^CSV   0.00166512,  , 384.358, 0.0569429, , 11.239, 34.20,
+&&&& PERF Bandwidth 384.358 GB/s
+^^^^ CUDA : elapsed = 0.00166512 sec,  Bandwidth = 384.358 
+^^^^REF : elapsed = 0.0569429 sec, Bandwidth = 11.239, Speedup 34.20
+^^^^ err tolerance : 4004096
+@@@@ total errors: 0
+@@@@ zrot test PASSED
+---------------------------------------------------------------------------------------------------------
+ccvResult=0

@@ -1,0 +1,16 @@
+./cublasTest -Rrot   -Pd -x2 -n10000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0045.log 2>&1
+-------------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing drot 
+#### args: n=5000000 incx=2 incy=1  cs =  (0x3fee5b9d136c6d96, 0.948683) sc =  (0x3fd43d136248490e, 0.316228)
+^^^^CSV   0.000627995,  , 254.779, 0.0141451, , 11.311, 22.52,
+&&&& PERF Bandwidth 254.779 GB/s
+^^^^ CUDA : elapsed = 0.000627995 sec,  Bandwidth = 254.779 
+^^^^REF : elapsed = 0.0141451 sec, Bandwidth = 11.311, Speedup 22.52
+^^^^ err tolerance : 1004096
+@@@@ total errors: 0
+@@@@ drot test PASSED
+-------------------------------------------------------------------------------------------------------------
+ccvResult=0

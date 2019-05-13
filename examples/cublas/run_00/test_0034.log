@@ -1,0 +1,13 @@
+./cublasTest -Rdot  -Pz -H -n16384000  -x2 -y2 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0034.log 2>&1
+--------------------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing zdotc
+#### args: n=8192000 incx=2 incy=2
+^^^^CSV   0.00128603,  , 203.840,  , , , ,
+&&&& PERF Bandwidth 203.84 GB/s
+^^^^ CUDA : elapsed = 0.00128603 sec,  Bandwidth = 203.840 
+@@@@ zdotc test PASSED
+--------------------------------------------------------------------------------------------------------------------
+ccvResult=0

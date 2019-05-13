@@ -1,0 +1,45 @@
+./cudnnTest -b -c64 -h56 -w56 -k64 -r3 -s3 -pad_h1 -pad_w1 -u1 -v1 -d0 -n256 -Ph -Rwgrad -algo1 -Pcomps -Pmath1 -T100 >> /data/tmp/work/cudnn/run_00/test_0077.log 2>&1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@@@@ Executing command: cudnnTest -b -c64 -h56 -w56 -k64 -r3 -s3 -pad_h1 -pad_w1 -u1 -v1 -d0 -n256 -Ph -Rwgrad -algo1 -Pcomps -Pmath1 -T100
+
+@@@@ Debug variable: texoff_dbg=0 (hex=0x00000000, flt=+0.0000e+00, dbl=+0.0000e+00, str='0')
+@@@@ Debug variable: dilation_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+@@@@ Debug variable: cask_splitk_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+
+@@@@ Starting wgrad_h?h_algo1_sm75 batch with 1 test(s)
+@@@@ Using RNG seed=0 in thread 0 for test geometries
+
+@@@@ Running test #1 of 1 of batch wgrad_h?h_algo1_sm75 (total attempts: 1)
+#### args : alpha=(0x40800000, +4.000000e+00)
+#### args : beta=(0x3f800000, +1.000000e+00)
+#### args: ImageTensor (input)  : sizes=[n=256,c=64,56,56] strides=[200704,3136,56,1] vect=0 packed=1
+#### args: DiffTensor (input)   : sizes=[n=256,c=64,56,56] strides=[200704,3136,56,1] vect=0 packed=1
+#### args: WGradTensor (output) : sizes=[k=64,c=64,3,3]
+#### args: Conv : pad=[1,1]  strides=[1,1]  dilation=[1,1]  mode=CONV  math=TENSOR_OP  groupCount=1  dataType=FLOAT
+#### InputTensor totalSize=51380224
+#### InputDiffTensor totalSize=51380224
+#### Filter Ouput totalSize=36864
+#### GEMM equivalent M=576 N=64 K=802816
+^^^^ Algo passed by user: 1
+^^^^ CUDA elapsed median = 4.042560 msec
+^^^^ CUDA elapsed for 100 runs varies from 3.955072 msec (min) to 4.677600 msec (max)
+^^^^ Workspace Size: 205670651 (196MB)
+^^^^ SOL  : theoretical Gflops = 20136.960000, measured Gflops = 13959.453829 (69.322547%)
+^^^^ SOL(Memory)  : theoretical GiB/s = 448.000000, measured GiB/s = 48.487714 (10.823150%)
+^^^^ CUDA : elapsed = 0.424014 sec,  Gflops = 1786810.090 
+@@@@ Test #1 of 1 of wgrad_h?h_algo1_sm75 passed (mismatches=0, total_mismatches=0, total_attempts=1)
+
+@@@@ No more tests to run in batch wgrad_h?h_algo1_sm75
+
+@@@@ Overall result       : wgrad_h?h_algo1_sm75 PASSED
+@@@@ First error msg      : no errors
+@@@@ Tests completed      : 1
+@@@@ Tests generated      : 1
+@@@@ Ref mismatches       : 0
+@@@@ Test UID             : a14b8f4cabe73b03a84d9d2fed0f506e
+@@@@ Total time (sec)     : 0.533988
+@@@@ Malloc count         : 0
+@@@@ Free count           : 0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ccvResult=0

@@ -1,0 +1,16 @@
+./cublasTest -Rrot   -Pc -n10000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0046.log 2>&1
+---------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing crot 
+#### args: n=10000000 incx=1 incy=1  cs =  (0x3f65eceb 0.898146), (0x3e2737ef 0.163299) sc =  (0x3ed105ec, 0.408248)
+^^^^CSV   0.000830173,  , 385.462, 0.056308, , 5.683, 67.83,
+&&&& PERF Bandwidth 385.462 GB/s
+^^^^ CUDA : elapsed = 0.000830173 sec,  Bandwidth = 385.462 
+^^^^REF : elapsed = 0.056308 sec, Bandwidth = 5.683, Speedup 67.83
+^^^^ err tolerance : 9004096
+@@@@ total errors: 0
+@@@@ crot test PASSED
+---------------------------------------------------------------------------------------------------------
+ccvResult=0

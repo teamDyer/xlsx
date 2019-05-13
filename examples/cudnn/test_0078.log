@@ -1,0 +1,45 @@
+./cudnnTest -b -c512 -h28 -w28 -k1024 -r1 -s1 -pad_h0 -pad_w0 -u2 -v2 -d0 -n256 -Ph -Rwgrad -algo1 -Pcomps -Pmath1 -T100 >> /data/tmp/work/cudnn/run_00/test_0078.log 2>&1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@@@@ Executing command: cudnnTest -b -c512 -h28 -w28 -k1024 -r1 -s1 -pad_h0 -pad_w0 -u2 -v2 -d0 -n256 -Ph -Rwgrad -algo1 -Pcomps -Pmath1 -T100
+
+@@@@ Debug variable: texoff_dbg=0 (hex=0x00000000, flt=+0.0000e+00, dbl=+0.0000e+00, str='0')
+@@@@ Debug variable: dilation_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+@@@@ Debug variable: cask_splitk_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+
+@@@@ Starting wgrad_h?h_algo1_sm75 batch with 1 test(s)
+@@@@ Using RNG seed=0 in thread 0 for test geometries
+
+@@@@ Running test #1 of 1 of batch wgrad_h?h_algo1_sm75 (total attempts: 1)
+#### args : alpha=(0x40800000, +4.000000e+00)
+#### args : beta=(0x3f800000, +1.000000e+00)
+#### args: ImageTensor (input)  : sizes=[n=256,c=512,28,28] strides=[401408,784,28,1] vect=0 packed=1
+#### args: DiffTensor (input)   : sizes=[n=256,c=1024,14,14] strides=[200704,196,14,1] vect=0 packed=1
+#### args: WGradTensor (output) : sizes=[k=1024,c=512,1,1]
+#### args: Conv : pad=[0,0]  strides=[2,2]  dilation=[1,1]  mode=CONV  math=TENSOR_OP  groupCount=1  dataType=FLOAT
+#### InputTensor totalSize=102760448
+#### InputDiffTensor totalSize=51380224
+#### Filter Ouput totalSize=524288
+#### GEMM equivalent M=512 N=1024 K=50176
+^^^^ Algo passed by user: 1
+^^^^ CUDA elapsed median = 4.453824 msec
+^^^^ CUDA elapsed for 100 runs varies from 4.442304 msec (min) to 5.185120 msec (max)
+^^^^ Workspace Size: 310380759 (296MB)
+^^^^ SOL  : theoretical Gflops = 20136.960000, measured Gflops = 11423.408730 (56.728565%)
+^^^^ SOL(Memory)  : theoretical GiB/s = 448.000000, measured GiB/s = 67.161702 (14.991451%)
+^^^^ CUDA : elapsed = 0.460575 sec,  Gflops = 1462196.317 
+@@@@ Test #1 of 1 of wgrad_h?h_algo1_sm75 passed (mismatches=0, total_mismatches=0, total_attempts=1)
+
+@@@@ No more tests to run in batch wgrad_h?h_algo1_sm75
+
+@@@@ Overall result       : wgrad_h?h_algo1_sm75 PASSED
+@@@@ First error msg      : no errors
+@@@@ Tests completed      : 1
+@@@@ Tests generated      : 1
+@@@@ Ref mismatches       : 0
+@@@@ Test UID             : 6de066089551110d0bcb8d73efa52cfb
+@@@@ Total time (sec)     : 0.607220
+@@@@ Malloc count         : 0
+@@@@ Free count           : 0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ccvResult=0

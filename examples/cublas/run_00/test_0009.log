@@ -1,0 +1,13 @@
+./cublasTest -Riamin  -Pd  -x2 -n100000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0009.log 2>&1
+----------------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing idamin
+#### args: n=50000000 incx=2 loop=10
+^^^^CSV   0.020113,  , 198.876,  , , , ,
+&&&& PERF Bandwidth 198.876 GB/s
+^^^^ CUDA : elapsed = 0.020113 sec,  Bandwidth = 198.876 
+@@@@ idamin test PASSED
+----------------------------------------------------------------------------------------------------------------
+ccvResult=0
