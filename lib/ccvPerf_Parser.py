@@ -42,16 +42,17 @@ def grep(content):
     """
     """ 
     results = OrderedDict()
+    ##add any extra stuff here that will be with test log
     results['ccv'] = {'Command': content[0], 'Exit Code': content[-1]}
-    ##parse for each grep in their order
+    ##parse for each grep request in their order
     for grep in CublasConfig.keys():
         for line in content:
-            ##search for the grep in each line of the test log
+            ##search for the grep request in each line of the test log
             if grep in line:
-                ##if found split the line up into tokens and grab the needed tokens
+                ##if grep request found, split the line up into tokens 
                 tokens = line.split(' ')
                 for statistic in CublasConfig[grep].keys():
-                    ##store each 
+                    ##store each statistic based on its token position
                     token = CublasConfig[grep][statistic]
                     results[statistic] = tokens[token]
     return results
