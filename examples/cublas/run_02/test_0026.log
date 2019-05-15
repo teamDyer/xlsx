@@ -1,0 +1,15 @@
+./cublasTest -Rcopy  -Pd -n50000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0026.log 2>&1
+---------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing dcopy
+#### args: n=50000000 incx=1 incy=1
+^^^^CSV   0.00203705,  , 392.725, 0.069623, , 11.490, 34.18,
+&&&& PERF Bandwidth 392.725 GB/s
+^^^^ CUDA : elapsed = 0.00203705 sec,  Bandwidth = 392.725 
+^^^^REF : elapsed = 0.069623 sec, Bandwidth = 11.490, Speedup 34.18
+@@@@ total errors: 0
+@@@@ dcopy test PASSED
+---------------------------------------------------------------------------------------------------------
+ccvResult=0

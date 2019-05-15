@@ -1,0 +1,15 @@
+./cublasTest -Rscal  -Ps -n10000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0048.log 2>&1
+---------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing sscal
+#### args: n=10000000 incx=1 ca = (0xbf800000, -1)
+^^^^CSV   0.000222206,  , 360.026, 0.00373006, , 21.447, 16.79,
+&&&& PERF Bandwidth 360.026 GB/s
+^^^^ CUDA : elapsed = 0.000222206 sec,  Bandwidth = 360.026 
+^^^^REF : elapsed = 0.00373006 sec, Bandwidth = 21.447, Speedup 16.79
+@@@@ total errors: 0
+@@@@ sscal test PASSED
+---------------------------------------------------------------------------------------------------------
+ccvResult=0

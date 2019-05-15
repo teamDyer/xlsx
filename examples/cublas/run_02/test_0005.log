@@ -1,0 +1,15 @@
+./cublasTest -Riamax  -Pz  -n100000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0005.log 2>&1
+------------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing izamax
+#### args: n=100000000 incx=1
+^^^^CSV   0.00405002,  , 395.060, 0.109235, , 14.647, 26.97,
+&&&& PERF Bandwidth 395.06 GB/s
+^^^^ CUDA : elapsed = 0.00405002 sec,  Bandwidth = 395.060 
+^^^^REF : elapsed = 0.109235 sec, Bandwidth = 14.647, Speedup 26.97
+@@@@ total errors: 0
+@@@@ izamax test PASSED
+------------------------------------------------------------------------------------------------------------
+ccvResult=0

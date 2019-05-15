@@ -1,0 +1,15 @@
+./cublasTest -Rnrm2  -Pd -x2 -n50000000 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0039.log 2>&1
+-------------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing dnrm2
+mem_waived = 400000008 bytes, device mem = 8368685056 bytes
+waived the test if mem_waived >= gmemAvail 
+#### args: n=25000000 incx=2
+^^^^CSV   0.0102289,  , 195.525,  , , , ,
+&&&& PERF Bandwidth 195.525 GB/s
+^^^^ CUDA : elapsed = 0.0102289 sec,  Bandwidth = 195.525 
+@@@@ dnrm2 test PASSED
+-------------------------------------------------------------------------------------------------------------
+ccvResult=0

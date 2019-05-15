@@ -1,0 +1,13 @@
+./cublasTest -Raxpy  -Pd -n16384000 -x2 -b -csv -T10 >> /data/tmp/work/cublas/BLAS1/run_00/test_0021.log 2>&1
+-------------------------------------------------------------------------------------------------------------
+@@@@ Debug variable: legacy_backdoor_dbg=-1 (hex=0xffffffff, flt=-1.0000e+00, dbl=-1.0000e+00, str='-1')
+@@@@ Debug variable: turing_hmma_algo_dbg=-2 (hex=0xfffffffe, flt=-2.0000e+00, dbl=-2.0000e+00, str='-2')
+
+Testing daxpy
+#### args: n=8192000 incx=2 incy=1 da = (0xbff0000000000000, -1)
+^^^^CSV   0.00065589,  , 299.758,  , , , ,
+&&&& PERF Bandwidth 299.758 GB/s
+^^^^ CUDA : elapsed = 0.00065589 sec,  Bandwidth = 299.758 
+@@@@ daxpy test PASSED
+-------------------------------------------------------------------------------------------------------------
+ccvResult=0
