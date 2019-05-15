@@ -32,7 +32,7 @@ data['run_02'] = {
 	}
 }
 
-def example():
+def sample(data):
 	"""
 	Data comes in as a nested dictionary with the format:
 		{
