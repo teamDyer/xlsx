@@ -1,0 +1,44 @@
+./cudnnTest -b -c512 -h28 -w28 -k256 -r1 -s1 -pad_h0 -pad_w0 -u2 -v2 -d0 -n256 -Ph -Rconv -T100 -Pcomps >> /data/tmp/work/cudnn/run_00/test_0128.log 2>&1
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+@@@@ Executing command: cudnnTest -b -c512 -h28 -w28 -k256 -r1 -s1 -pad_h0 -pad_w0 -u2 -v2 -d0 -n256 -Ph -Rconv -T100 -Pcomps
+
+@@@@ Debug variable: texoff_dbg=0 (hex=0x00000000, flt=+0.0000e+00, dbl=+0.0000e+00, str='0')
+@@@@ Debug variable: dilation_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+@@@@ Debug variable: cask_splitk_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+
+@@@@ Starting conv_h?h_algo0_sm75 batch with 1 test(s)
+@@@@ Using RNG seed=0 in thread 0 for test geometries
+
+@@@@ Running test #1 of 1 of batch conv_h?h_algo0_sm75 (total attempts: 1)
+#### args: alpha=(0x40800000, +4.000000e+00)
+#### args: beta=(0x3f800000, +1.000000e+00)
+#### args: ImageTensor (input)  : sizes=[n=256,c=512,28,28] strides=[401408,784,28,1] vect=0 packed=1
+#### args: FilterTensor (input) : sizes=[k=256,c=512,1,1]
+#### args: RespTensor (output)  : sizes=[n=256,c=256,14,14] strides=[50176,196,14,1] vect=0 packed=1
+#### args: Conv : pad=[0,0]  strides=[2,2]  dilation=[1,1]  mode=CONV  math=DEFAULT  groupCount=1  dataType=FLOAT
+#### GEMM equivalent M=50176 N=256 K=512
+#### bias:  sizes=[n=1,c=256,1,1] strides=[256,1,1,1] vect=0 packed=1
+^^^^ Algo passed by user: 0
+^^^^ Workspace size: 0 (0 MB)
+^^^^ CUDA elapsed median = 1.920512 msec
+^^^^ CUDA elapsed for 100 runs varies from 1.622016 msec (min) to 1.992704 msec (max)
+^^^^ tensor elements: read=102891520 write=12845056 total=115736576 memsize(x100)=23.147315 GB
+^^^^ SOL  : theoretical Gflops = 20136.960000, measured Gflops = 7075.192360 (35.135354%)
+^^^^ SOL(Memory)  : theoretical GiB/s = 448.000000, measured GiB/s = 124.509623 (27.792327%)
+^^^^ CUDA : elapsed = 0.185908 sec,  Gflops = 7075.192 
+@@@@ Test #1 of 1 of conv_h?h_algo0_sm75 passed (mismatches=0, total_mismatches=0, total_attempts=1)
+
+@@@@ No more tests to run in batch conv_h?h_algo0_sm75
+
+@@@@ Overall result       : conv_h?h_algo0_sm75 PASSED
+@@@@ First error msg      : no errors
+@@@@ Tests completed      : 1
+@@@@ Tests generated      : 1
+@@@@ Ref mismatches       : 0
+@@@@ Test UID             : b25023433889e1926b323ca0dfdfee5c
+@@@@ Total time (sec)     : 0.297025
+@@@@ Malloc count         : 0
+@@@@ Free count           : 0
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ccvResult=0

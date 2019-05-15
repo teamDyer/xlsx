@@ -1,0 +1,46 @@
+./cudnnTest -b -c256 -h14 -w14 -k256 -r3 -s3 -pad_h1 -pad_w1 -u1 -v1 -d0 -n256 -Ps -Rdgrad -T100 -Pcomps >> /data/tmp/work/cudnn/run_00/test_0023.log 2>&1
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+@@@@ Executing command: cudnnTest -b -c256 -h14 -w14 -k256 -r3 -s3 -pad_h1 -pad_w1 -u1 -v1 -d0 -n256 -Ps -Rdgrad -T100 -Pcomps
+
+@@@@ Debug variable: texoff_dbg=0 (hex=0x00000000, flt=+0.0000e+00, dbl=+0.0000e+00, str='0')
+@@@@ Debug variable: dilation_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+@@@@ Debug variable: cask_splitk_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+
+@@@@ Starting dgrad_s?s_algo0_sm75 batch with 1 test(s)
+@@@@ Using RNG seed=0 in thread 0 for test geometries
+
+@@@@ Running test #1 of 1 of batch dgrad_s?s_algo0_sm75 (total attempts: 1)
+#### args : alpha=(0x40800000, +4.000000e+00)
+#### args : beta=(0x3f800000, +1.000000e+00)
+#### args: DiffTensor (input)   : sizes=[n=256,c=256,14,14] strides=[50176,196,14,1] vect=0 packed=1
+#### args: FilterTensor (input) : sizes=[k=256,c=256,3,3]
+#### args: DGradTensor (output) : sizes=[n=256,c=256,14,14] strides=[50176,196,14,1] vect=0 packed=1
+#### args: Conv : pad=[1,1]  strides=[1,1]  dilation=[1,1]  mode=CONV  math=DEFAULT  groupCount=1  dataType=FLOAT
+#### outputTensor totalSize=51380224
+#### InputDiffTensor totalSize=51380224
+#### Filter totalSize=2359296
+#### GEMM equivalent M=50176 N=256 K=2304
+^^^^ Algo passed by user: 0
+^^^^ CUDA elapsed median = 9.661120 msec
+^^^^ CUDA elapsed for 100 runs varies from 9.527584 msec (min) to 12.082624 msec (max)
+^^^^ Workspace Size: 0 (0MB)
+^^^^ tensor elements: read=13434880 write=12845056 total=26279936 memsize(x100)=10.511974 GB
+^^^^ SOL  : theoretical Gflops = 20136.960000, measured Gflops = 5901.069145 (29.304667%)
+^^^^ SOL(Memory)  : theoretical GiB/s = 448.000000, measured GiB/s = 10.480127 (2.339314%)
+^^^^ CUDA : elapsed = 1.00304 sec,  Gflops = 1510673.701 
+@@@@ Test #1 of 1 of dgrad_s?s_algo0_sm75 passed (mismatches=0, total_mismatches=0, total_attempts=1)
+
+@@@@ No more tests to run in batch dgrad_s?s_algo0_sm75
+
+@@@@ Overall result       : dgrad_s?s_algo0_sm75 PASSED
+@@@@ First error msg      : no errors
+@@@@ Tests completed      : 1
+@@@@ Tests generated      : 1
+@@@@ Ref mismatches       : 0
+@@@@ Test UID             : 857ea4adb1395870810dc37b18873971
+@@@@ Total time (sec)     : 1.071179
+@@@@ Malloc count         : 0
+@@@@ Free count           : 0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ccvResult=0

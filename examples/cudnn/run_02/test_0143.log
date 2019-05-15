@@ -1,0 +1,45 @@
+./cudnnTest -b -c512 -h7 -w7 -k2048 -r1 -s1 -pad_h0 -pad_w0 -u1 -v1 -d0 -n128 -Ps -Rwgrad -T100 -Pcomps >> /data/tmp/work/cudnn/run_00/test_0143.log 2>&1
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+@@@@ Executing command: cudnnTest -b -c512 -h7 -w7 -k2048 -r1 -s1 -pad_h0 -pad_w0 -u1 -v1 -d0 -n128 -Ps -Rwgrad -T100 -Pcomps
+
+@@@@ Debug variable: texoff_dbg=0 (hex=0x00000000, flt=+0.0000e+00, dbl=+0.0000e+00, str='0')
+@@@@ Debug variable: dilation_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+@@@@ Debug variable: cask_splitk_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+
+@@@@ Starting wgrad_s?s_algo0_sm75 batch with 1 test(s)
+@@@@ Using RNG seed=0 in thread 0 for test geometries
+
+@@@@ Running test #1 of 1 of batch wgrad_s?s_algo0_sm75 (total attempts: 1)
+#### args : alpha=(0x40800000, +4.000000e+00)
+#### args : beta=(0x3f800000, +1.000000e+00)
+#### args: ImageTensor (input)  : sizes=[n=128,c=512,7,7] strides=[25088,49,7,1] vect=0 packed=1
+#### args: DiffTensor (input)   : sizes=[n=128,c=2048,7,7] strides=[100352,49,7,1] vect=0 packed=1
+#### args: WGradTensor (output) : sizes=[k=2048,c=512,1,1]
+#### args: Conv : pad=[0,0]  strides=[1,1]  dilation=[1,1]  mode=CONV  math=DEFAULT  groupCount=1  dataType=FLOAT
+#### InputTensor totalSize=3211264
+#### InputDiffTensor totalSize=12845056
+#### Filter Ouput totalSize=1048576
+#### GEMM equivalent M=512 N=2048 K=6272
+^^^^ Algo passed by user: 0
+^^^^ CUDA elapsed median = 4.421952 msec
+^^^^ CUDA elapsed for 100 runs varies from 3.850240 msec (min) to 4.724704 msec (max)
+^^^^ Workspace Size: 0 (0MB)
+^^^^ SOL  : theoretical Gflops = 20136.960000, measured Gflops = 3081.685008 (15.303625%)
+^^^^ SOL(Memory)  : theoretical GiB/s = 448.000000, measured GiB/s = 16.029970 (3.578118%)
+^^^^ CUDA : elapsed = 0.426823 sec,  Gflops = 197227.841 
+@@@@ Test #1 of 1 of wgrad_s?s_algo0_sm75 passed (mismatches=0, total_mismatches=0, total_attempts=1)
+
+@@@@ No more tests to run in batch wgrad_s?s_algo0_sm75
+
+@@@@ Overall result       : wgrad_s?s_algo0_sm75 PASSED
+@@@@ First error msg      : no errors
+@@@@ Tests completed      : 1
+@@@@ Tests generated      : 1
+@@@@ Ref mismatches       : 0
+@@@@ Test UID             : 901affc8710898e24809961272e58d93
+@@@@ Total time (sec)     : 0.467401
+@@@@ Malloc count         : 0
+@@@@ Free count           : 0
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+ccvResult=0

@@ -1,0 +1,46 @@
+./cudnnTest -b -c256 -h56 -w56 -k512 -r1 -s1 -pad_h0 -pad_w0 -u2 -v2 -d0 -n256 -Ph -Rdgrad -algo1 -Pcomps -Pmath1 -T100 >> /data/tmp/work/cudnn/run_00/test_0087.log 2>&1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@@@@ Executing command: cudnnTest -b -c256 -h56 -w56 -k512 -r1 -s1 -pad_h0 -pad_w0 -u2 -v2 -d0 -n256 -Ph -Rdgrad -algo1 -Pcomps -Pmath1 -T100
+
+@@@@ Debug variable: texoff_dbg=0 (hex=0x00000000, flt=+0.0000e+00, dbl=+0.0000e+00, str='0')
+@@@@ Debug variable: dilation_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+@@@@ Debug variable: cask_splitk_dbg=1 (hex=0x00000001, flt=+1.0000e+00, dbl=+1.0000e+00, str='1')
+
+@@@@ Starting dgrad_h?h_algo1_sm75 batch with 1 test(s)
+@@@@ Using RNG seed=0 in thread 0 for test geometries
+
+@@@@ Running test #1 of 1 of batch dgrad_h?h_algo1_sm75 (total attempts: 1)
+#### args : alpha=(0x40800000, +4.000000e+00)
+#### args : beta=(0x3f800000, +1.000000e+00)
+#### args: DiffTensor (input)   : sizes=[n=256,c=512,28,28] strides=[401408,784,28,1] vect=0 packed=1
+#### args: FilterTensor (input) : sizes=[k=512,c=256,1,1]
+#### args: DGradTensor (output) : sizes=[n=256,c=256,56,56] strides=[802816,3136,56,1] vect=0 packed=1
+#### args: Conv : pad=[0,0]  strides=[2,2]  dilation=[1,1]  mode=CONV  math=TENSOR_OP  groupCount=1  dataType=FLOAT
+#### outputTensor totalSize=411041792
+#### InputDiffTensor totalSize=205520896
+#### Filter totalSize=262144
+#### GEMM equivalent M=802816 N=256 K=512
+^^^^ Algo passed by user: 1
+^^^^ CUDA elapsed median = 12.023520 msec
+^^^^ CUDA elapsed for 100 runs varies from 11.993664 msec (min) to 12.195840 msec (max)
+^^^^ Workspace Size: 0 (0MB)
+^^^^ tensor elements: read=102891520 write=205520896 total=308412416 memsize(x100)=61.682483 GB
+^^^^ SOL  : theoretical Gflops = 20136.960000, measured Gflops = 4366.669775 (21.684851%)
+^^^^ SOL(Memory)  : theoretical GiB/s = 448.000000, measured GiB/s = 51.193668 (11.427158%)
+^^^^ CUDA : elapsed = 1.20489 sec,  Gflops = 4471469.849 
+@@@@ Test #1 of 1 of dgrad_h?h_algo1_sm75 passed (mismatches=0, total_mismatches=0, total_attempts=1)
+
+@@@@ No more tests to run in batch dgrad_h?h_algo1_sm75
+
+@@@@ Overall result       : dgrad_h?h_algo1_sm75 PASSED
+@@@@ First error msg      : no errors
+@@@@ Tests completed      : 1
+@@@@ Tests generated      : 1
+@@@@ Ref mismatches       : 0
+@@@@ Test UID             : 978b000c29592b3292b6a5a736154bcf
+@@@@ Total time (sec)     : 1.570199
+@@@@ Malloc count         : 0
+@@@@ Free count           : 0
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ccvResult=0
