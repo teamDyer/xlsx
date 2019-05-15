@@ -22,7 +22,7 @@ CudnnConfig["SOL  :"] = {"SOL - Theoretical Gflops": 5, "SOL - Measured Gflops":
 CudnnConfig["SOL(Memory)"] = {"SOL(MEMORY) - Theoretical (GiB/s)": 4, "SOL(MEMORY) - Measured (GiB/s)": 9, "SOL(MEMORY) - Percentage": 11}
 CudnnConfig["^^^^ CUDA :"] = {"Total Elapsed Time (s)": 4, "Total Gflops": 8}
 
-repository = 'examples/cudnn'
+repository = 'examples/cublas'
 
 def example():
     """
@@ -33,7 +33,7 @@ def example():
         testLogs = os.listdir(repository + "/" + iteration)
         for testLog in sorted(testLogs):
             file = repository + '/' + iteration + '/' + testLog
-            results = grep(file,CudnnConfig)
+            results = grep(file,CublasConfig)
             run[os.path.splitext(os.path.basename(file))[0]] = results
         data[iteration] = run
     return data
