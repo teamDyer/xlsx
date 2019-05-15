@@ -1,5 +1,0 @@
-/* GNU ld script
-   Use the shared library, but some functions are only in
-   the static library, so try that secondarily.  */
-OUTPUT_FORMAT(elf64-x86-64)
-GROUP ( /home/brandon/github/xlsx/environment/glibc/glibc-2.25/lib/libc.so.6 /home/brandon/github/xlsx/environment/glibc/glibc-2.25/lib/libc_nonshared.a  AS_NEEDED ( /home/brandon/github/xlsx/environment/glibc/glibc-2.25/lib/ld-linux-x86-64.so.2 ) )
