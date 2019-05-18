@@ -4,7 +4,10 @@ libs+=('yolk3k')  ##see installed packages
 libs+=('pyopenxl') ##excel
 
 ##path to the python you want to use (use 3.x)
-python="/cygdrive/c/Program Files/Python/python";
+python="Python3.7_windows/python";
+
+##upgrade to newest pip just in case
+$python -m pip install --upgrade pip;
 
 ##make sure virtual environment is available
 $python -m pip install virtualenv;
